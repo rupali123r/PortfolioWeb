@@ -1,21 +1,31 @@
-
+import { useEffect, useRef } from 'react';
 function Project() {
+
+    const ref = useRef(null);
+
+    const scrollToElement = () => {
+        ref.current?.scrollIntoView({ behavior: 'smooth' });
+    };
+
+    useEffect(() => {
+        scrollToElement();
+    }, []);
 
     return (
         <>
 
             <div className="container-fluid pt-5 pb-5 height">
-                <div   className="container">
+                <div ref={ref} className="container">
                     <div className="project-section">
                         <h2>My Projects</h2>
                         <div className="row">
                             <div className="col-lg-12">
                                 <ul className="nav nav-tabs" id="myTab" role="tablist" style={{ display: "flex", justifyContent: "center", border: "none" }}>
                                     <li className="nav-item" role="presentation">
-                                        <button className="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Games</button>
+                                        <button className="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Website</button>
                                     </li>
                                     <li className="nav-item" role="presentation">
-                                        <button className="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Website</button>
+                                        <button className="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Games</button>
                                     </li>
                                     <li className="nav-item" role="presentation">
                                         <button className="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Apps</button>
@@ -30,7 +40,99 @@ function Project() {
                             <div className="col-lg-12">
                                 <div className="tab-content pt-4" id="myTabContent">
 
-                                    <div className="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabIndex="0">
+
+                                    <div className="tab-pane fade  show  active" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabIndex="0">
+                                        <div className="row">
+                                            <div className="col-lg-3 col-md-6 p-0">
+                                                <div className="project">
+                                                    <img src="free-images-for-commercial-use--15-.png" alt='gamecity' />
+                                                    <div className="pro-overlay">
+                                                        <h3>Bhopal.city</h3>
+                                                        <p>Serching Website</p>
+                                                        <a href="https://bhopal.city/" rel="noreferrer" target="_blank">Live </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col-lg-3 col-md-6 p-0">
+                                                <div className="project">
+                                                    <img src="istockphoto-171591277-1024x1024.jpg" alt='gamebreaking' />
+                                                    <div className="pro-overlay">
+                                                        <h3>nvsparkle</h3>
+                                                        <p>Ecommerce Website</p>
+                                                        <a href="https://nvsparkle.com//" target="_blank" rel="noreferrer">Live</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col-lg-3 col-md-6 p-0">
+                                                <div className="project">
+                                                    <img src="istockphoto-871231100-1024x1024.jpg" alt='gameorfarm' />
+                                                    <div className="pro-overlay">
+                                                        <h3>Orfarm Website</h3>
+
+                                                        <a href="https://rupali123r.github.io/Orfarm_Website_fullResponsive/">view code</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col-lg-3 col-md-6 p-0">
+                                                <div className="project">
+                                                    <img src="video-game-player-landing-page_23-2149079054.jpg" alt='gaming' />
+                                                    <div className="pro-overlay">
+                                                        <h3>Gaming Solution Website</h3>
+                                                        <a href="https://rust-consolecommunity.com/" rel="noreferrer" target="_blank">Live</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                              
+                                            <div className="col-lg-3 col-md-6 p-0">
+                                                <div className="project">
+                                                    <img src="laptop-show-map-route-direction-graphic_53876-137603.jpg" alt='artb' />
+                                                    <div className="pro-overlay">
+                                                        <h3>Top Deals</h3>
+                                                        
+                                                        <a href="https://rupali123r.github.io/Top-Deals/" rel="noreferrer" target="_blank">Live</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col-lg-3 col-md-6 p-0">
+                                                <div className="project">
+                                                    <img src="full-shot-woman-online-shopping-concept_23-2149629600.jpg" alt='gameresolve' />
+                                                    <div className="pro-overlay">
+                                                        <h3>resolvegroup.in</h3>
+                                                        <p>E-Commerce Website</p>
+                                                        <a href="https://permanentprofil.se/" rel="noreferrer" >live</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                         
+                                     
+                                            <div className="col-lg-3 col-md-6 p-0">
+                                                <div className="project">
+                                                    <img src="online-purchasing-payment-e-commerce-banking_53876-127604.jpg" alt='dark' />
+                                                    <div className="pro-overlay">
+                                                        <h3></h3>
+                                                        <p>Govt. Website</p>
+                                                        <a href="http://www.governancenow.com/" rel="noreferrer" >live</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                         
+                                            <div className="col-lg-3 col-md-6 p-0">
+                                                <div className="project">
+                                                    <img src="work1.jpg" alt='deal' />
+                                                    <div className="pro-overlay">
+                                                        <h3>Top Deal</h3>
+                                                        <p>E-commerce website</p>
+                                                        <a href="https://rupali123r.github.io/Top-Deals/">view code</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+                                    <div className="tab-pane fade" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabIndex="0">
                                         <div className="row">
                                             <div className="col-lg-3 col-md-6 p-0">
                                                 <div className="project">
@@ -72,93 +174,6 @@ function Project() {
                                         </div>
                                     </div>
 
-
-                                    <div className="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabIndex="0">
-                                        <div className="row">
-                                            <div className="col-lg-3 col-md-6 p-0">
-                                                <div className="project">
-                                                    <img src="free-images-for-commercial-use--15-.png" alt='gamecity' />
-                                                    <div className="pro-overlay">
-                                                        <h3>Bhopal.city</h3>
-                                                        <p>Serching Website</p>
-                                                        <a href="https://bhopal.city/" rel="noreferrer" target="_blank">Live </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-3 col-md-6 p-0">
-                                                <div className="project">
-                                                    <img src="full-shot-woman-online-shopping-concept_23-2149629600.jpg" alt='gameresolve' />
-                                                    <div className="pro-overlay">
-                                                        <h3>resolvegroup.in</h3>
-                                                        <p>E-Commerce Website</p>
-                                                        <a href="https://resolvegroup.in/projects/nvsparkle/" rel="noreferrer" target="_blank">live</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-3 col-md-6 p-0">
-                                                <div className="project">
-                                                    <img src="istockphoto-171591277-1024x1024.jpg" alt='gamebreaking' />
-                                                    <div className="pro-overlay">
-                                                        <h3>Breakingnewsmp</h3>
-                                                        <p>News Website</p>
-                                                        <a href="https://breakingnewsmp.com/" target="_blank" rel="noreferrer">Live</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-3 col-md-6 p-0">
-                                                <div className="project">
-                                                    <img src="istockphoto-871231100-1024x1024.jpg" alt='gameorfarm' />
-                                                    <div className="pro-overlay">
-                                                        <h3>Orfarm Website</h3>
-
-                                                        <a href="https://rupali123r.github.io/Orfarm_Website_fullResponsive/">view code</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-3 col-md-6 p-0">
-                                                <div className="project">
-                                                    <img src="laptop-show-map-route-direction-graphic_53876-137603.jpg" alt='artb' />
-                                                    <div className="pro-overlay">
-                                                        <h3>artab.com</h3>
-                                                        <p>Booking Website</p>
-                                                        <a href="https://aratb.com/" rel="noreferrer" target="_blank">Live</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-3 col-md-6 p-0">
-                                                <div className="project">
-                                                    <img src="online-purchasing-payment-e-commerce-banking_53876-127604.jpg" alt='dark' />
-                                                    <div className="pro-overlay">
-                                                        <h3>DarkMode.com</h3>
-                                                        <p>E-commerce Website</p>
-                                                        <a href="https://darkmode.store/" rel="noreferrer" target="_blank">live</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-3 col-md-6 p-0">
-                                                <div className="project">
-                                                    <img src="video-game-player-landing-page_23-2149079054.jpg" alt='gaming' />
-                                                    <div className="pro-overlay">
-                                                        <h3>Gaming Solution Website</h3>
-                                                        <a href="https://resolvegroup.in/projects/rust-consolecommunity/" rel="noreferrer" target="_blank">Live</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="col-lg-3 col-md-6 p-0">
-                                                <div className="project">
-                                                    <img src="work1.jpg" alt='deal' />
-                                                    <div className="pro-overlay">
-                                                        <h3>Top Deal</h3>
-                                                        <p>E-commerce website</p>
-                                                        <a href="https://rupali123r.github.io/Top-Deals/">view code</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-
-                                    </div>
                                     <div className="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabIndex="0">
                                         <div className="row">
                                             <div className="col-lg-3 col-md-6 p-0">
@@ -228,7 +243,7 @@ function Project() {
                                                     <img src="ff033dc39574f5dfae4c91a5605f1120.gif" alt='to do' />
                                                     <div className="pro-overlay">
                                                         <h3>To do List App</h3>
-                                                    
+
                                                         <a href="/" rel="noreferrer" target="_blank">view code </a>
                                                     </div>
                                                 </div>
@@ -344,7 +359,7 @@ function Project() {
                     </div>
                 </div>
             </div>
-         
+
 
         </>
     )
